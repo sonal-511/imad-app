@@ -4,12 +4,60 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var articleone = {
+    title:'imad|soanl gupta',
+    date:'14 august 2017',
+    heading:'artice one',
+    content:` <p1>
+       South China Sea is the dominant term used in English for the sea, and the name in most European languages is equivalent. This name is a result of early European interest in the sea as a route from Europe and South Asia to the trading opportunities of China. In the sixteenth century Portuguese sailors called it the China Sea (Mare da China); later needs to differentiate it from nearby bodies of water led to calling it the South China Sea.[8] The International Hydrographic Organization refers to the sea as "South China Sea (Nan Hai)
+      </p1>
+      
+      <p1>
+          South China Sea is the dominant term used in English for the sea, and the name in most European languages is equivalent. This name is a result of early European interest in the sea as a route from Europe and South Asia to the trading opportunities of China. In the sixteenth century Portuguese sailors called it the China Sea (Mare da China); later needs to differentiate it from nearby bodies of water led to calling it the South China Sea.[8] The International Hydrographic Organization refers to the sea as "South China Sea (Nan Hai)"
+      </p1>
+      
+      `
+      
+    
+};
+function createtemplatedata(data)
+{ var title=data.title;
+var heading=data.heading;
+var date=data.date;
+var content=data.content;
+var template=
+    `<html>
+<head>
+  <title> 
+     ${title}
+   </title>
+               <meta name="viewpoint" content="width-device-width ,initial-scale=1"/>
+                <link href="/ui/style.css" rel="stylesheet">
+ </head>
+   <body>
+      <div class="container">
+           <a href='/'>home</a>
+             <hr/>
+    <h1>
+        ${heading}
+            ${date}
+    </h1>
+     <hr/>
+        <div>
+           ${content};
+        </div>
+      </div>
+  </body>
+</html>
+    `
+    return template;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one',function(req,res){
-    res.sendfile(path.join(__dirname,'ui','article-one.html'));
+    res.send(createhtmltemplate(articleone));
 });
 
 app.get('/article-two',function(req,res){
