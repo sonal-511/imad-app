@@ -6,7 +6,7 @@ var ih=document.getElementById('ijk');
 function moveleft()
 {
    mar=mar+5;
-   ih.style.mar=mar+'px';
+   ih.style.marginLeft=mar+'px';
 }
 ih.onclick=function(){
 var interval=setInterval(moveleft,100);
