@@ -84,9 +84,9 @@ var template=
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:articlename',function(req,res){
-    var articlename=req.params.articlename;
-    res.send(createtemplatedata(articles[articlename]));
+app.get('/:mety',function(req,res){
+    var mety=req.params.mety;
+    res.send(createtemplatedata(articles[mety]));
 });
 app.get('/ui/style.css', function(req,res){
     res.sendFile(path.join(__dirname,'ui','style.css'));
