@@ -1,8 +1,13 @@
 console.log('Loaded!');
-
+var mar=0;
 var element =document.getElementById('quk');
 element.innerHTML='new value here i come';
 var ih=document.getElementById('ijk');
+function moveleft()
+{
+   mar=mar+5;
+   ih.style.mar=mar+'px';
+}
 ih.onclick=function(){
-ih.style.marginLeft='100px';    
+var interval=setInterval(moveleft,100);
 };
