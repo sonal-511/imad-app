@@ -16,9 +16,12 @@ var counter=0;
 var element=document.getElementById('counter');
 element.onclick=function(){
  //make a request to counter endpoint
- 
+   var kick=new XMLHttpRequest();
  //captutre the response and store it in a variable
- 
+ if(kick.readychange==XMLHttpRequest.DONE&& kick.status==200)
+ {
+     
+ }
  //render the variable in correct span
  counter=counter+1;
  var span=document.getElementById('count');
