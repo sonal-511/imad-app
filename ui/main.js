@@ -18,7 +18,7 @@ element.onclick=function(){
  //make a request to counter endpoint
    var kick=new XMLHttpRequest();
  //captutre the response and store it in a variable
- if(kick.readychange==XMLHttpRequest.DONE&& kick.status==200)
+ if(kick.readychange===XMLHttpRequest.DONE && kick.status===200)
  {
    var counter=kick.ResponseText;
    var span=documnet.getElementById('count');
