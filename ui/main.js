@@ -25,6 +25,7 @@ element.onclick=function(){
    span.innerHTML=counter.toString();
  }
  //render the variable in correct span
- kick.open('GET' "")
+ kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/art",true);
+ kick.send(null);
 };
 
