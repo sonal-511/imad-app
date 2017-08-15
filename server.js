@@ -77,7 +77,7 @@ var template=
       </div>
   </body>
 </html>
-    `
+    `;
     return template;
 }
 
