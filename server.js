@@ -81,8 +81,12 @@ var template=
     return template;
 }
 
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/plz', function (req, res) {
+  res.send('hie');
 });
 app.get('/:mety',function(req,res){
     var mety=req.params.mety;
@@ -107,9 +111,7 @@ app.get('/ui/main.js',function(req,res){
    // res.send("hello");
 //});
 
-app.get('/plz', function (req, res) {
-  res.send('hie');
-});
+
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
