@@ -88,6 +88,13 @@ app.get('/', function (req, res) {
 app.get('/plz', function (req, res) {
   res.send('hie');
 });
+var counter=0;
+app.get('/art', function( req, res){
+    counter=counter+1;
+    res.send(counter.toString());
+    
+    res.send("hello");
+});
 
 app.get('/:mety',function(req,res){
     var mety=req.params.mety;
@@ -96,13 +103,7 @@ app.get('/:mety',function(req,res){
 app.get('/ui/style.css', function(req,res){
     res.sendFile(path.join(__dirname,'ui','style.css'));
 });
-var counter=0;
-app.get('/art', function( req, res){
-    counter=counter+1;
-    res.send(counter.toString());
-    
-    res.send("hello");
-});
+
 
 
 app.get('/ui/madi.png', function (req, res) {
