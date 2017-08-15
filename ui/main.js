@@ -20,7 +20,7 @@ element.onclick=function(){
  //captutre the response and store it in a variable
  if(kick.readychange===XMLHttpRequest.DONE && kick.status===200)
  {
-   var counter=kick.ResponseText;
+   var counter=kick.responseText;
    var span=documnet.getElementById('count');
    span.innerHTML=counter.toString();
  }
