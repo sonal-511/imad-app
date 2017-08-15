@@ -13,7 +13,7 @@ var interval=setInterval(moveleft,100);
 };
 */
 var counter=0;
-var element=documnet.getElementById('counter');
+var element=document.getElementById('counter');
 element.onclick=function(){
  //make a request to counter endpoint
  
