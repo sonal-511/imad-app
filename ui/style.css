@@ -4,12 +4,16 @@ body {
     margin-top: 75px;
 }
 
-.center {
+.center_img {
     text-align: center;
+}
+.center_txt{
+    text-align:left;
+    
 }
 
 .text-big {
-    font-size: 150%;
+    font-size: 100%;
 }
 
 .bold {
