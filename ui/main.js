@@ -12,9 +12,9 @@ ih.onclick=function(){
 var interval=setInterval(moveleft,100);
 };
 */
-/*var counter=0;
+var counter=0;
 var element=documnet.getElementById('counter');
-element.onClick=function(){
+element.onclick=function(){
  //make a request to counter endpoint
  
  //captutre the response and store it in a variable
@@ -24,4 +24,3 @@ element.onClick=function(){
  var span=document.getElementById('count');
  span.innerHTML=counter.toString();
 };
-*/
