@@ -29,3 +29,20 @@ element.onclick=function(){
  kick.send(null);
 };
 
+var namevarr=document.getElementById('name1');
+var name=namevarr.value;
+var submit=document.getElementById('submit');
+submit.onclick=function(){
+ 
+ //make a request to the server and send the names
+ 
+ //capture a list of names an drender it
+ var names=['name1','name2','name3','name4'];
+ var list='';
+ for(var i=0;i<names.length;i++){
+ 
+    list=list+'<li>'+names[i]+'</li>'; 
+ }
+ var ul=document.getElementById('name_list');
+ ul.innerHTML=list
+};
