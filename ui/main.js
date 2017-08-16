@@ -41,7 +41,7 @@ var name=namevarr.value;
  if(kick.readyState===XMLHttpRequest.DONE && kick.status===200)
  {
     var names=kick.responseText;
-     names=JSON.parce(names);
+     names=JSON.parse(names);
  var list='';
  for(var i=0;i<names.length;i++){
  
@@ -55,6 +55,6 @@ var name=namevarr.value;
  };
 
 kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name?name="+name,true);
- kick.send(null);
+kick.send(null);
 };
  
