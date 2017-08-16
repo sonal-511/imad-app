@@ -37,6 +37,7 @@ var name=namevarr.value;
  //make a request to the server and send the names
    var kick=new XMLHttpRequest();
  //captutre the response and store it in a variable
+ kick.onreadystatechange=function(){
  if(kick.readychange===XMLHttpRequest.DONE && kick.status===200)
  {
     var names=kick.responseText;
@@ -51,7 +52,9 @@ var name=namevarr.value;
  ul.innerHTML=list;
 
  }
+ };
 
+
+};
  kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name?name="+name,true);
  kick.send(null);
-};
