@@ -54,7 +54,7 @@ var name=namevarr.value;
  }
  };
 
-
-};
- kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name?name="+name,true);
+kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name?name="+name,true);
  kick.send(null);
+};
+ 
