@@ -88,13 +88,6 @@ app.get('/', function (req, res) {
 app.get('/plz', function (req, res) {
   res.send('hie');
 });
-var counter=0;
-app.get('/art', function( req, res){
-    counter=counter+1;
-    res.send(counter.toString());
-    
-    res.send("hello");
-});
 var names=[];
 app.get('/submit-name/',function(req,res){
  var name=req.query.name;
@@ -102,6 +95,14 @@ app.get('/submit-name/',function(req,res){
  res.send(JSON.stringify(names));
  
 });
+var counter=0;
+app.get('/art', function( req, res){
+    counter=counter+1;
+    res.send(counter.toString());
+    
+    res.send("hello");
+});
+
 app.get('/:mety',function(req,res){
     var mety=req.params.mety;
     res.send(createtemplatedata(articles[mety]));
