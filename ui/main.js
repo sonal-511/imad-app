@@ -38,7 +38,7 @@ var name=namevarr.value;
    var kick=new XMLHttpRequest();
  //captutre the response and store it in a variable
  kick.onreadystatechange=function(){
- if(kick.readychange===XMLHttpRequest.DONE && kick.status===200)
+ if(kick.readyState===XMLHttpRequest.DONE && kick.status===200)
  {
     var names=kick.responseText;
      names=JSON.parce(names);
