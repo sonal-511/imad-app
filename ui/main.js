@@ -17,6 +17,7 @@ var element=document.getElementById('counter');
 element.onclick=function(){
  //make a request to counter endpoint
    var kick=new XMLHttpRequest();
+   kick.onreadystatechange=function(){
  //captutre the response and store it in a variable
  if(kick.readychange===XMLHttpRequest.DONE && kick.status===200)
  {
@@ -24,6 +25,7 @@ element.onclick=function(){
    var span=documnet.getElementById('count');
    span.innerHTML=counter.toString();
  }
+   };
  //render the variable in correct span
  kick.open('GET', "http://sonalgupta115.imad.hasura-app.io/art",true);
  kick.send(null);
