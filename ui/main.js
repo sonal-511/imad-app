@@ -52,6 +52,6 @@ var name=namevarr.value;
 
  }
 
- res.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name"+name,true);
+ res.open('GET', "http://sonalgupta115.imad.hasura-app.io/submit-name?name="+name,true);
  res.open(null);
 };
