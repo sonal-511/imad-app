@@ -1,7 +1,17 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var pool=require('pg').Pool;
+var config=
+{
+    user:'sonalgupta115',
+    database:'sonalgupta115',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+    
+    
+};
 var app = express();
 app.use(morgan('combined'));
 var articles={
@@ -111,7 +121,10 @@ app.get('/ui/style.css', function(req,res){
     res.sendFile(path.join(__dirname,'ui','style.css'));
 });
 
-
+app.get('/test-db',function(req,res){
+   //make a select request
+   //return the response with the results
+});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
