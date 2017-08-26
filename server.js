@@ -120,7 +120,7 @@ app.get('/:mety',function(req,res){
 app.get('/ui/style.css', function(req,res){
     res.sendFile(path.join(__dirname,'ui','style.css'));
 });
-var pool=new Pool(config);
+var pool=new pool(config);
 
 app.get('/test-db',function(req,res){
    //make a select request
