@@ -131,6 +131,15 @@ app.get('/art', function( req, res){
     
     res.send("hello");
 });
+function hash(input,salt)
+{
+    var hashed=crypto.pbkdf25Sync(input,salt,10000,512,'sha512');
+    return( hashed.toString('hex'));
+}
+app.get('/hash/tets0',function(req,res){
+   var hashstring=hash(req.params.tets0,'this-is-some-random-string');
+   res.send(hashstring);
+});
 
 app.get('/articles/:articlename', function(req,res){
     //var article=req.params.articlename;
