@@ -129,6 +129,33 @@ app.get('/art', function( req, res){
     
     res.send("hello");
 });
+app.get('/articles/articlename', function(req,res){
+    var article=req.params.articlename;
+    pool.query("SELECT * FROM article WHERE title='"+req.params.articlename+"'",function(err,result){
+     
+     if(err)
+     {
+         res.status(500).send(err.toString());
+         
+     }
+     else
+     {
+         if(result.rows.length===0)
+         
+         {
+         res.status(404).send("article not found");    
+         }
+         else
+         {
+             var articlename=result.rows[0];
+             res.send(createtemplatedata(articlename));
+         }
+     }
+    });
+        
+    
+    
+});
 
 app.get('/:mety',function(req,res){
     var mety=req.params.mety;
