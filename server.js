@@ -159,7 +159,7 @@ app.get('/articles/articlename', function(req,res){
 
 //app.get('/:mety',function(req,res){
  //   var mety=req.params.mety;
-    res.send(createtemplatedata(articles[mety]));
+  //  res.send(createtemplatedata(articles[mety]));
 //});
 //app.get('/ui/style.css', function(req,res){
   //  res.sendFile(path.join(__dirname,'ui','style.css'));
