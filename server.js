@@ -78,6 +78,8 @@ var template=
              <hr/>
     <h1>
         ${heading}
+        <hr/>
+        <br>
             ${date}
     </h1>
      <hr/>
